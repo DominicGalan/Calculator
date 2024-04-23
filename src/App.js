@@ -3,10 +3,10 @@ import './App.css';
 import { useState } from "react";
 
 
-function CalcButton({label, buttonClassName = "CalcButton", onClick}) {
+function CalcButton({color, label, buttonClassName = "CalcButton", onClick}) {
 
   return (
-    <button className= {buttonClassName} onClick={onClick}>
+    <button className= {buttonClassName} onClick={onClick} style={{ backgroundColor: color }}>
       {label}
     </button>
   );
@@ -21,7 +21,6 @@ function CalcDisplay({display}) {
 }
 
 export default function App() {
-
   const[disp, setDisp] = useState(0);
 
   const clickHandler = (e) => {
@@ -43,22 +42,22 @@ export default function App() {
       <div className="CalcContainer">
         <CalcDisplay display={disp} />
         <div className="ButtonContainer">
-          <CalcButton label={"/"} onClick={clickHandler}/>
+          <CalcButton label={"/"} onClick={clickHandler} color={'#535dc7'} />
           <CalcButton label={7} onClick={numberClickHandler}/>
           <CalcButton label={8} onClick={numberClickHandler}/>
           <CalcButton label={9} onClick={numberClickHandler}/>
-          <CalcButton label={"*"} onClick={clickHandler}/>
+          <CalcButton label={"*"} onClick={clickHandler} color={'#535dc7'}/>
           <CalcButton label={4} onClick={numberClickHandler}/>
           <CalcButton label={5} onClick={numberClickHandler}/>
           <CalcButton label={6} onClick={numberClickHandler}/>
-          <CalcButton label={"+"} onClick={clickHandler}/>
+          <CalcButton label={"+"} onClick={clickHandler} color={'#535dc7'}/>
           <CalcButton label={1} onClick={numberClickHandler}/>
           <CalcButton label={2} onClick={numberClickHandler}/>
           <CalcButton label={3} onClick={numberClickHandler}/>
-          <CalcButton label={"-"}  onClick={clickHandler}/>
-          <CalcButton label={"C"} onClick={clickHandler}/>
+          <CalcButton label={"-"}  onClick={clickHandler} color={'#535dc7'}/>
+          <CalcButton label={"C"} onClick={clickHandler} color={'#c75353'}/>
           <CalcButton label={0} onClick={numberClickHandler}/>
-          <CalcButton label={"="} onClick={clickHandler}/>
+          <CalcButton label={"="} onClick={clickHandler} color={'#59c753'}/>
         </div>
       </div>
     </div>

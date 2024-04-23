@@ -17,7 +17,7 @@
   text-align: right;
   background-color: gray;
   color: white;
-
+  border-radius: 10px;
 }
 
 .ButtonContainer {
@@ -32,5 +32,6 @@
   padding: 7px;
   color: white;
   font-size: 2em;
-  background-color: black;
+  background-color: #343641;
+  border-radius: 10px;
 }
