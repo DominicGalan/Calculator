@@ -35,6 +35,6 @@
   padding: 7px;
   color: white;
   font-size: 2em;
-  background-color: #343641;
+  background: linear-gradient(to top, black, gray);
   border-radius: 10px;
 }
