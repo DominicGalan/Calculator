@@ -40,13 +40,13 @@ export default function App() {
 
     let result = null;
 
-    if (op === "ADD") {
+    if (op === "+") {
       result = (parseInt(n1) + parseInt(n2))
-    } else if (op === "SUB") {
+    } else if (op === "-") {
       result = (parseInt(n1) - parseInt(n2))
-    } else if (op === "DIV") {
+    } else if (op === "÷") {
       result = (parseInt(n1) / parseInt(n2))
-    } else if (op === "MUL") {
+    } else if (op === "x") {
       result = (parseInt(n1) * parseInt(n2))
     } else {
       result = ('Invalid Operation')
@@ -95,22 +95,22 @@ export default function App() {
       <div className="CalcContainer">
         <CalcDisplay display={disp} />
         <div className="ButtonContainer">
-          <CalcButton label={"DIV"} onClick={opClickHandler} lineargradient={'#535dc7'}/>
+          <CalcButton label={"÷"} onClick={opClickHandler} lineargradient={'#535dc7'}/>
           <CalcButton label={7} onClick={numberClickHandler}/>
           <CalcButton label={8} onClick={numberClickHandler}/>
           <CalcButton label={9} onClick={numberClickHandler}/>
-          <CalcButton label={"MUL"} onClick={opClickHandler} lineargradient={'#535dc7'}/>
+          <CalcButton label={"x"} onClick={opClickHandler} lineargradient={'#535dc7'}/>
           <CalcButton label={4} onClick={numberClickHandler}/>
           <CalcButton label={5} onClick={numberClickHandler}/>
           <CalcButton label={6} onClick={numberClickHandler}/>
-          <CalcButton label={"ADD"} onClick={opClickHandler} lineargradient={'#535dc7'}/>
+          <CalcButton label={"+"} onClick={opClickHandler} lineargradient={'#535dc7'}/>
           <CalcButton label={1} onClick={numberClickHandler}/>
           <CalcButton label={2} onClick={numberClickHandler}/>
           <CalcButton label={3} onClick={numberClickHandler}/>
-          <CalcButton label={"SUB"} onClick={opClickHandler} lineargradient={'#535dc7'}/>
-          <CalcButton label={"CLR"} onClick={clrClickHandler} lineargradient={'#c75353'}/>
+          <CalcButton label={"-"} onClick={opClickHandler} lineargradient={'#535dc7'}/>
+          <CalcButton label={"C"} onClick={clrClickHandler} lineargradient={'#c75353'}/>
           <CalcButton label={0} onClick={numberClickHandler}/>
-          <CalcButton label={"EQ"} onClick={equalClickHandler} lineargradient={'#59c753'}/>
+          <CalcButton label={"="} onClick={equalClickHandler} lineargradient={'#59c753'}/>
         </div>
       </div>
     </div>
