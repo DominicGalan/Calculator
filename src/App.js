@@ -43,6 +43,7 @@ export default function App() {
     setOp(null);
   }
 
+<<<<<<< HEAD
   const equalClickHandler = () => {
     let result = null;
 
@@ -63,12 +64,37 @@ export default function App() {
     }
     setDisp(result.toString());
     setN1(result.toString());
+=======
+  const equalClickHandler = (e) => {
+    console.log('Num1 ' + n1 + 'l ' + 'Op ' + op + 'l ' + 'Num2 ' + n2);
+
+    let result = null;
+
+    if (op === "+") {
+      result = (parseInt(n1) + parseInt(n2))
+    } else if (op === "-") {
+      result = (parseInt(n1) - parseInt(n2))
+    } else if (op === "÷") {
+      result = (parseInt(n1) / parseInt(n2))
+    } else if (op === "x") {
+      result = (parseInt(n1) * parseInt(n2))
+    } else {
+      result = ('Invalid Operation')
+    }
+    setDisp(result);
+    setN1(result);
+>>>>>>> a48800c416fe5b839e3afbaa1bbb0271e8277235
     setN2(null);
     setOp(null);
   }
 
   const numberClickHandler = (e) => {
+<<<<<<< HEAD
     const value = e.target.innerHTML;
+=======
+    e.preventDefault();
+    const value  = e.target.innerHTML;
+>>>>>>> a48800c416fe5b839e3afbaa1bbb0271e8277235
     if (value === "0" && disp === "0") {
       return;
     }
@@ -109,6 +135,7 @@ export default function App() {
     setOp(value);
     setDisp(value);
   }
+  
 
   const decimalClickHandler = () => {
     if (op === null) {
